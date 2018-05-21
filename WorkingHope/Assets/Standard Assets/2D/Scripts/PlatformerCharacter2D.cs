@@ -78,7 +78,7 @@ namespace UnityStandardAssets._2D
                 Flip();
             }
             // Otherwise if the input is moving the player left and the player is facing right...
-            else if (m_Rigidbody2D.velocity.x < 0.1 && m_FacingRight)
+            else if (m_Rigidbody2D.velocity.x < -0.1 && m_FacingRight)
             {
                 // ... flip the player.
                 Flip();
