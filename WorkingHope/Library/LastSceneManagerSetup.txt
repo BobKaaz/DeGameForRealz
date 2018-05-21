@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/WIP1WorkingHope.unity
+- path: Assets/Scenes/Scene2Wip1.unity
   isLoaded: 1
   isActive: 1

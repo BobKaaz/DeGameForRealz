@@ -67,12 +67,22 @@ namespace UnityStandardAssets._2D
 
         public void Update()
         {
-            if (m_Rigidbody2D.velocity.y > 0 && !Input.GetKey(jumpButton))
+            if (m_Rigidbody2D.velocity.y > 0 && !Input.GetKey(jumpButton) && !m_Grounded)
             {
                 m_Rigidbody2D.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
             }
 
-            
+            if (m_Rigidbody2D.velocity.x > 0.1 && !m_FacingRight)
+            {
+                // ... flip the player.
+                Flip();
+            }
+            // Otherwise if the input is moving the player left and the player is facing right...
+            else if (m_Rigidbody2D.velocity.x < 0.1 && m_FacingRight)
+            {
+                // ... flip the player.
+                Flip();
+            }
         }
 
 
@@ -115,17 +125,7 @@ namespace UnityStandardAssets._2D
                 }
                 
                 // If the input is moving the player right and the player is facing left...
-                if (move > 0 && !m_FacingRight)
-                {
-                    // ... flip the player.
-                    Flip();
-                }
-                // Otherwise if the input is moving the player left and the player is facing right...
-                else if (move < 0 && m_FacingRight)
-                {
-                    // ... flip the player.
-                    Flip();
-                }
+                
             }
             // If the player should jump...
             if (m_Grounded && jump)

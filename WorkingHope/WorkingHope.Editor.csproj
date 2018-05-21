@@ -304,6 +304,17 @@
     <Compile Include="Assets\Tiles\Assets\Tilemap\Brushes\Tint Brush Smooth\Scripts\Editor\TintBrushSmooth.cs" />
     <Compile Include="Assets\Tiles\Assets\Tilemap\Brushes\Tint Brush\Scripts\Editor\TintBrush.cs" />
     <Compile Include="Assets\Tiles\Assets\Tilemap\Tiles\Rule Tile\Scripts\Editor\RuleTileEditor.cs" />
+    <Compile Include="Assets\UPAToolkit\Editor\EditorGUI\UPAEditorWindow.cs" />
+    <Compile Include="Assets\UPAToolkit\Editor\EditorGUI\UPAExportWindow.cs" />
+    <Compile Include="Assets\UPAToolkit\Editor\EditorGUI\UPAImageCreationWindow.cs" />
+    <Compile Include="Assets\UPAToolkit\Editor\EditorGUI\UPAImageEditorPreview.cs" />
+    <Compile Include="Assets\UPAToolkit\Editor\EditorGUI\UPALayerSettings.cs" />
+    <Compile Include="Assets\UPAToolkit\Editor\UPABlendModes.cs" />
+    <Compile Include="Assets\UPAToolkit\Editor\UPACustomTypes.cs" />
+    <Compile Include="Assets\UPAToolkit\Editor\UPADrawer.cs" />
+    <Compile Include="Assets\UPAToolkit\Editor\UPAImage.cs" />
+    <Compile Include="Assets\UPAToolkit\Editor\UPALayer.cs" />
+    <Compile Include="Assets\UPAToolkit\Editor\UPASession.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\2d-mega-pack - kopie\README.txt" />
