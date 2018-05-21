@@ -511,19 +511,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\noahb\Desktop\Personal Unity Projects\DeGameForRealz\WorkingHope
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: da2f0000
-    m_LastClickedID: 12250
-    m_ExpandedIDs: 000000001c2800002c2800009e280000ca280000dc2800003a2a00006c2a00006a2b0000b62f0000b23000003231000000ca9a3bffffff7f
+    m_SelectedIDs: ca2f0000
+    m_LastClickedID: 12234
+    m_ExpandedIDs: 000000001c2800009e280000dc2800003a2a00006c2a00006a2b0000b62f0000b23000003231000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -671,7 +671,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 96afffffcccfffff9efbffff00000000
+    m_ExpandedIDs: 9efbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -727,9 +727,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 9.141691, y: -1.5708233, z: 0.69140625}
+    m_Target: {x: 11.195149, y: -0.69722754, z: 0.66873425}
     speed: 2
-    m_Value: {x: 9.141691, y: -1.5708233, z: 0.69140625}
+    m_Value: {x: 11.195149, y: -0.69722754, z: 0.66873425}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -757,9 +757,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 24.533108
+    m_Target: 26.790768
     speed: 2
-    m_Value: 24.533108
+    m_Value: 26.790768
   m_Ortho:
     m_Target: 1
     speed: 2
