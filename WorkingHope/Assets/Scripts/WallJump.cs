@@ -14,6 +14,8 @@ public class WallJump : MonoBehaviour
     public float jumpTime = 1;
     private bool jumping2 = false;
     private bool jumping3;
+    private bool facingRight = false;
+    private bool facingLeft = false;
 
     // Use this for initialization
     void Awake()
@@ -32,16 +34,18 @@ public class WallJump : MonoBehaviour
             jumping = false;
         }
 
-        if (jumping3 && script.m_FacingRight)
+        if (jumping3 && facingRight)
         {
             GetComponent<Rigidbody2D>().velocity = (new Vector2(-speed, speed));
             jumping3 = false;
+            facingRight = false;
             // script.Flip();
         }
-        else if (jumping3 && !script.m_FacingRight)
+        else if (jumping3 && facingLeft)
         {
             GetComponent<Rigidbody2D>().velocity = (new Vector2(speed, speed));
             jumping3 = false;
+            facingLeft = false;
             // script.Flip();
         }
 
@@ -50,6 +54,7 @@ public class WallJump : MonoBehaviour
             GetComponent<Rigidbody2D>().velocity = (new Vector2(-speed, speed));
             jumping3 = true;
             jumping2 = false;
+            facingRight = true;
         }
 
         if (script.wallJumping && !script.m_FacingRight && jumping2)
@@ -57,6 +62,7 @@ public class WallJump : MonoBehaviour
             GetComponent<Rigidbody2D>().velocity = (new Vector2(speed, speed));
             jumping3 = true;
             jumping2 = false;
+            facingLeft = true;
         }
 
         
