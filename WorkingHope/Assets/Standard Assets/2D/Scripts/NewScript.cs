@@ -30,9 +30,15 @@ public class NewScript : MonoBehaviour {
     private float attackTimer;
 
     private Animator playerAnim;
-	
-	// Update is called once per frame
-	void Update () {
+
+    private bool facingRightAttack = false;
+
+    private bool facingLeftAttack = false;
+
+    private bool isAttacking2 = false;
+
+    // Update is called once per frame
+    void Update () {
 
         player = GameObject.FindGameObjectWithTag("Player");
 
@@ -53,41 +59,50 @@ public class NewScript : MonoBehaviour {
                 isAttacking = false;
             }
 
-            if (Input.GetButtonDown("Fire1"))
+            if (facingRightAttack && Time.time - 0.12f > attackTimer)
             {
+                boxPos = new Vector3(playerPos.position.x + rightBoxOffset, playerPos.position.y - vertBoxOffset, playerPos.position.z);
 
+                hitBox = Instantiate(prefab, boxPos, Quaternion.identity);
 
-                if (!isAttacking)
+                hitBox.transform.SetParent(player.transform);
+
+                facingRightAttack = false;
+            }
+
+            if (facingLeftAttack && Time.time - 0.12f > attackTimer)
+            {
+                boxPos = new Vector3(playerPos.position.x - leftBoxOffset, playerPos.position.y - vertBoxOffset, playerPos.position.z);
+
+                hitBox = Instantiate(prefab, boxPos, Quaternion.identity);
+
+                hitBox.transform.SetParent(player.transform);
+
+                facingLeftAttack = false;
+            }
+
+            if (Input.GetButtonDown("Fire1") && !isAttacking2)
+            {
+                isAttacking = true;
+
+                isAttacking2 = true;
+
+                attackTimer = Time.time;
+
+                if (booleanScriptTwo)
                 {
-
-                    isAttacking = true;
-
-                    attackTimer = Time.time;
-
-                    if (booleanScriptTwo)
-                    {
-
-                        boxPos = new Vector3(playerPos.position.x + rightBoxOffset, playerPos.position.y - vertBoxOffset, playerPos.position.z);
-
-                        hitBox = Instantiate(prefab, boxPos, Quaternion.identity);
-
-                        hitBox.transform.SetParent(player.transform);
-                    }
-
-                    else
-                    {
-                        boxPos = new Vector3(playerPos.position.x - leftBoxOffset, playerPos.position.y - vertBoxOffset, playerPos.position.z);
-
-                        hitBox = Instantiate(prefab, boxPos, Quaternion.identity);
-
-                        hitBox.transform.SetParent(player.transform);
-                    }
+                    facingRightAttack = true;
                 }
 
+                else
+                {
+                    facingLeftAttack = true;
+                }
             }
-            else if (hitBox != null && Time.time > attackTimer + 0.32f)
+            else if (hitBox != null && Time.time > attackTimer + 0.22f)
             {
                 Destroy(hitBox);
+                isAttacking2 = false;
             }
         }
 	}

@@ -18,6 +18,7 @@ namespace UnityStandardAssets._2D
         private Vector3 m_LookAheadPos;
         private float nextTimeToSearch = 0;
 
+
         // Update is called once per frame
         private void Update()
         {

@@ -36,13 +36,13 @@ public class WallJump : MonoBehaviour
         {
             GetComponent<Rigidbody2D>().velocity = (new Vector2(-speed, speed));
             jumping3 = false;
-            script.Flip();
+            // script.Flip();
         }
         else if (jumping3 && !script.m_FacingRight)
         {
             GetComponent<Rigidbody2D>().velocity = (new Vector2(speed, speed));
             jumping3 = false;
-            script.Flip();
+            // script.Flip();
         }
 
         if (script.wallJumping && script.m_FacingRight && jumping2)

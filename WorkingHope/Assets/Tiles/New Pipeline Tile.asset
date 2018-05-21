@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: New Pipeline Tile
   m_EditorClassIdentifier: 
   m_Sprites:
-  - {fileID: 0}
+  - {fileID: 21300010, guid: 06309879cb2ed1341af4cd1bed3ab3b3, type: 3}
   - {fileID: 21300004, guid: 209b82f900c8a3c459953d652b0e4216, type: 3}
-  - {fileID: 0}
+  - {fileID: 21300008, guid: 06309879cb2ed1341af4cd1bed3ab3b3, type: 3}
   - {fileID: 21300014, guid: 209b82f900c8a3c459953d652b0e4216, type: 3}
   - {fileID: 21300008, guid: 209b82f900c8a3c459953d652b0e4216, type: 3}
