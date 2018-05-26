@@ -16,6 +16,8 @@ public class MovingPlatform : MonoBehaviour {
     private float nextTimeToSearch = 0;
     private Vector2 lastPos;
     private Vector2 posDif;
+    private bool playerMoving;
+    private Rigidbody2D playerRB;
 
     // Use this for initialization
     void Start () {
@@ -48,14 +50,21 @@ public class MovingPlatform : MonoBehaviour {
         lastPos = platformRb.position;
 
         rb.velocity = new Vector2(speedX * direction, speedY * direction);
-
-	}
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (isHorizontal)
+        if (isHorizontal && playerMoving)
         {
-            collision.GetComponent<Rigidbody2D>().position += posDif;
+            playerRB.position += posDif;
         }
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        playerRB = collision.GetComponent<Rigidbody2D>();
+        playerMoving = true;
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        playerRB = collision.GetComponent<Rigidbody2D>();
+        playerMoving = false;
     }
 }
