@@ -24045,6 +24045,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 114225463692464030, guid: 982e26e8602bb244ebd47f9fa1e15cca,
+        type: 2}
+      propertyPath: speedY
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225463692464030, guid: 982e26e8602bb244ebd47f9fa1e15cca,
+        type: 2}
+      propertyPath: speedX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114225463692464030, guid: 982e26e8602bb244ebd47f9fa1e15cca,
+        type: 2}
+      propertyPath: isHorizontal
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 982e26e8602bb244ebd47f9fa1e15cca, type: 2}
   m_IsPrefabParent: 0

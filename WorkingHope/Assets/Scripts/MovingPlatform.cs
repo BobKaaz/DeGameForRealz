@@ -53,6 +53,9 @@ public class MovingPlatform : MonoBehaviour {
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        collision.GetComponent<Rigidbody2D>().position += posDif;
+        if (isHorizontal)
+        {
+            collision.GetComponent<Rigidbody2D>().position += posDif;
+        }
     }
 }
